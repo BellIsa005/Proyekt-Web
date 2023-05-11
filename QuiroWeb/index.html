@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>Quiro Ilustra</title>
+
+	<!--Link para animación en redes sociales-->
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+	<!--Encabezado-->
+	<div class="mainmenu">
+		<div><!--Logo y página principal-->
+			<a title="mainlogo" href="index.html"><img src="img/quiro_logo.jpeg" alt="QuiroIlustra" width="30%" height="30%"></a>
+		</div>
+		<div><!--Pestañas principales-->
+			<ul class="menu">
+				<li><a href="#">Nosotros</a></li>
+				<li><a href="#">Ropa</a>
+					<ul>
+						<li><a href="#">Hombres</a></li>
+						<li><a href="#">Mujeres</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Accesorios</a></li>
+				<li><a href="#">Nuevo</a></li>
+			</ul>
+		</div>
+		<div><!--Carrito-->
+			
+		</div>
+	</div>
+	<!--Sección de Videos-->
+	<div class="video">
+		
+	</div>
+	<!--Caracteristicas de Quiro-->
+	<div class="carcts">
+		<figure class="crt"><!--Caracteristica #1-->
+			<img
+				src="img/bolivia.jpeg"
+				alt="bolivia_lapaz"
+				class="crt_image"
+			/>
+			<figcaption class="crt_body">
+				<h2 class="crt_title">Productos</h2>
+				<p class="crt_description">
+					Hecho por manos bolivianas
+				</p>
+			</figcaption>
+		</figure>
+		<figure class="crt"><!--Caracteristica #2-->
+			<img
+				src="img/gran_poder.jpeg"
+				alt="gran_poder_lapaz"
+				class="crt_image"
+			/>
+			<figcaption class="crt_body">
+				<h2 class="crt_title">Diseño</h2>
+				<p class="crt_description">
+					Que muestra nuestra cultura y tradición
+				</p>
+			</figcaption>
+		</figure>
+		<figure class="crt"><!--Caracteristica #3-->
+			<img
+				src="img/bus.jpeg"
+				alt="bus_in_lapaz"
+				class="crt_image"
+			/>
+			<figcaption class="crt_body">
+				<h2 class="crt_title">Estilo</h2>
+				<p class="crt_description">
+					Con diseños únicos
+				</p>
+			</figcaption>
+		</figure>
+	</div>
+	<!--División normal-->
+	<div class="divs">
+		<h2>Novedades</h2>
+	</div>
+	<!--Sección de novedades-->
+	<div class="nove">
+		<div><!--Novedad #1-->
+			
+		</div>
+		<div><!--Novedad #2-->
+			
+		</div>
+		<div><!--Novedad #3-->
+			
+		</div>
+	</div>
+	<!--Sección de acceso directo-->
+	<div class="access">
+		<div class="card">
+			<div class="card__inner">
+				<div class="card__body card__body--front1">
+					<h2 class="acc_title">COMPRA</h2>
+				</div>
+				<div class="card__body card__body--back1">
+					<h2 class="acc_title"><a href="#"> QUIRO'S CLOTHES</a></h2>
+				</div>
+			</div>
+		</div>
+		<div class="card"><!--Acceso a accesorios-->
+			<div class="card__inner">
+				<div class="card__body card__body--front2">
+					<h2 class="acc_title">COMPRA</h2>
+				</div>
+				<div class="card__body card__body--back2">
+					<h2 class="acc_title"><a href="#">  QUIRO'S ACCESORIES</a></h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Footer-->
+	<div class="foot">
+		<div><!--Logo-->
+			
+		</div>
+		<div><!--Chat a whatsapp-->
+			
+		</div>
+		<div><!--Correo Electrónico-->
+			
+		</div>
+		<div class="wrapper"><!--Redes Sociales-->
+			<button class="btn">
+				<i class="ri-share-line"></i>
+			</button>
+			<ul class="list">
+				<li class="item">
+					<a href="https://www.instagram.com/quiroilustra/" class="link ig">
+						<i class="ri-instagram-line"></i>
+					</a>
+				</li>
+				<li class="item" style="--d: 0.20s">
+					<a href="https://www.facebook.com/quiroilustraciones/?ref=page_internal" class="link fb">
+						<i class="ri-facebook-line"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<script>
+			const btnEl = document.querySelector('.btn')
+			const toggleOptions = () => {
+				const wrapperEl = document.querySelector('.wrapper')
+				const iconEl = btnEl.querySelector('i')
+
+				wrapperEl.classList.toggle('active')
+
+				if (iconEl.classList.contains('ri-share-line')) {
+					iconEl.classList.replace('ri-share-line', 'ri-close-line')
+				} else {
+					iconEl.classList.replace('ri-close-line', 'ri-share-line')
+				}
+			}
+			btnEl.addEventListener('click', toggleOptions)
+		</script>
+	</div>
+</body>
+</html>
