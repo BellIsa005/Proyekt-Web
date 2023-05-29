@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+body{
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: repeat(3, auto-fit);
+	background-color: #fff;
+	font-family: courier new;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+/*Delete this divs style*/
+/*div{
+	border: white 1px solid;
+}*/
+
+/*--------COMIENZO DE LA DIVISIÓN CALLED MAINMENU*/
+.mainmenu{
+	display: grid;
+	grid-template-columns: 20% 60% 20%;
+	grid-template-rows: 100px;
+	background-color: #370658;
+	position: fixed;
+	top: 0;
+  left: 0;
+	width: 100%;
+	align-items: center;
+	justify-items: center;
+	z-index: 5;
+}
+
+/*--------Comienzo de la parte del logo*/
+#logo{
+	margin: auto;
+	width: 30%;
+	height: 95%;
+}
+/*--------Fin de la parte del logo*/
+/*--------Comienzo de la parte del menú para navegar*/
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.link {
+  position: relative;
+  display: inline-block;
+}
+.link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 4px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+}
+.link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.submenu {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 90px;
+  background-color: #370658;
+  padding: 10px;
+  transition: opacity 0.25s;
+}
+.link:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+}
+/*--------Fin de la parte del menú para navegar*/
+/*--------Comienzo de la parte del carrito*/
+
+
+
+/*--------Fin de la parte del carrito*/
+/*--------FIN DE LA DIVISIÓN CALLED MAINMENU*/
+/*--------COMIENZO DE LA DIVISIÓN CAROUSEL CLOTHES*/
+
+.carousel-container {
+    width: 1000px;
+    margin: 10px auto;
+    margin-top: 170px;
+    margin-bottom: 70px;
+    min-height: 200px;
+    position: relative;
+    direction: ltr;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {.carousel-container {
+        width: 80%;
+    }}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {.carousel-container {
+        width: 80%;
+    }}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {.carousel-container {
+        width: 80%;
+    }}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {.carousel-container {
+        width: 85%;
+    }}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {.carousel-container {
+        width: 85%;
+    }}
+
+.carousel-container .track {
+    display: inline-flex;
+    transition: transform 2s;
+}
+.carousel-container .card-container {
+    width: 255px;
+    height: 350px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    direction: rtl;
+}
+.carousel-container .card-container .card {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.carousel-container .carousel-inner {
+    overflow: hidden;
+}
+.nav .arrow {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #aaaaaa;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.nav div{
+    background: rgba(222,222,222,0.6);
+}
+.nav div:hover{
+    background: rgba(222,222,222,0.2);
+}
+.nav div span{
+    font-size: 2em;
+    color: red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav .right {
+    right: -30px;
+}
+
+.nav .left {
+    left: -30px;
+    display: none;
+}
+.nav .right.hide {
+    display: none;
+}
+
+.nav .right.show {
+    display: block;
+}
+.nav .left.show {
+    display: block;
+}
+.card > * {
+    flex: 0;
+}
+.card .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    flex-grow: 1;
+}
+.card img {
+    width: 100%;
+    min-height: 150px;
+    max-height: 300px;
+}
+.card .info {
+    flex-basis: 40px;
+    flex-grow: 0;
+    background: #333333;
+    color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 15px;
+}
+/*--------FIN DE LA DIVISIÓN CAROUSEL CLOTHES*/
+/*------COMIENZO DE LA DIVISIÓN CALLED FOOT*/
+.foot{
+  display: grid;
+  background-color: #370658;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: 100px;
+  width: 100%;
+  place-content: center;
+  bottom: 0;
+  
+}
+
+/*-------Style for Whatsapp link*/
+.whats{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_whats{
+  font-family: arial;
+  color: white;
+  font-weight: bold;
+  padding: 1em 2em 1em 3.5em;
+  border-radius: 2em;
+  background: #25d366 url('https://tochat.be/click-to-chat-directory/css/whatsapp.svg') 
+  no-repeat 1.5em center;
+  background-size: 1.6em;
+}
+/*-------End for Whatsapp link*/
+
+/*-------Style for email link*/
+.email{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn_email{
+  font-family: arial;
+  color: #370658;
+  font-weight: bold;
+  padding: 1em 2em 1em 2em;
+  border-radius: 2em;
+  background: #fff;
+  background-size: 1.6em;
+}
+/*-------End for email link*/
+
+/*-------Style for social media*/
+.wrapper {
+  position: relative;
+}
+.wrapper :is(.btn, .link) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  color: #151515;
+  border-radius: 50%;
+}
+.btn {
+  position: absolute;
+  top: 20px;
+  left: 125px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.active .btn,
+.btn:hover {
+  outline: 3px solid #0561ee;
+  outline-offset: -4px;
+}
+.item {
+  position: absolute;
+  top: 20px;
+  left: 125px;
+  list-style: none;
+  transition: transform 0.5s;
+  transition-delay: var(--d);
+}
+.wrapper.active .item:nth-child(1) {
+  transform: translateX(-65px);
+}
+.wrapper.active .item:nth-child(2) {
+  transform: translateX(65px);
+}
+.link:hover {
+  color: #fff;
+  transition: background-color 0.5s;
+}
+.ig:hover {
+  background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+.fb:hover {
+  background-color: #4267B2;
+}
+/*------FIN DE LA DIVISIÓN CALLED FOOT*/
+/*FIN*/

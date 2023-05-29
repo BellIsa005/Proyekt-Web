@@ -7,115 +7,94 @@
 	<title>Quiro Ilustra</title>
 
 	<!--Link para animación en redes sociales-->
-	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"/>
 	<!-- Link Swiper's CSS -->
-    <link
+  <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <!--Ícono para el email-->
+  <script src="https://kit.fontawesome.com/c7958308f5.js" crossorigin="anonymous"></script>
+
+
+
+
 </head>
 <body>
 	<!--Encabezado-->
 	<div class="mainmenu">
 		<div><!--Logo y página principal-->
-			<a title="mainlogo" href="index.html"><img src="img/quiro_logo.jpeg" alt="QuiroIlustra" width="30%" height="30%"></a>
+			<a title="mainlogo" href="index.html"><img id=logo src="img/quiro_logo.jpeg" alt="QuiroIlustra" width="30%" height="30%"></a>
 		</div>
-		<!--<div>Pestañas principales
-			<ul class="menu">
-				<li><a href="#">Nosotros</a></li>
-				<li><a href="#">Ropa</a>
-					<ul>
-						<li><a href="#">Hombres</a></li>
-						<li><a href="#">Mujeres</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Accesorios</a></li>
-				<li><a href="#">Nuevo</a></li>
-			</ul>
-		</div>-->
-        <nav>
-            <!--<a href="#">
-                <i class="ri-apple-fill"></i>
-            </a>-->
-            <ul>
-                <li>
-                    <a href="#" class="link">About us</a>
-                </li>
-                <li>
-                    <a href="#" class="link">Clothes</a>
-                    <ul>
-						<li><a href="#" class="link">Hombres</a></li>
-						<li><a href="#" class="link">Mujeres</a></li>
-					</ul>
-                </li>
-                <li>
-                    <a href="#" class="link">Accesorios</a>
-                </li>
-                <li>
-                    <a href="#" class="link">Release</a>
-                </li>
-            </ul>
-        </nav>
-
-
+		<!--Pestañas principales-->
+		<nav>
+		  <ul>
+		  	<li class="link">
+		      <a href="#">About us</a>
+		    </li>
+		    <li class="link">
+		      <a>Clothes</a>
+		      <ul class="submenu">
+		        <li class="link"><a href="clothesvar.html">Hombres</a></li>
+		        <li class="link"><a href="clothesmuj.html">Mujeres</a></li>
+		      </ul>
+		    </li>
+		    <li class="link">
+		      <a href="#">Accessories</a>
+		    </li>
+		    <li class="link">
+		      <a href="#">Release</a>
+		    </li>
+		  </ul>
+		</nav>
 		<div><!--Carrito-->
 			
 		</div>
 	</div>
-
 	<!--Sección de Videos-->
-    <div class="swiper carousel">
-      <div class="swiper-wrapper">
-        <figure class="swiper-slide">
-          <video src="vdo/video1.mp4" muted autoplay loop></video>
-          <figcaption class="swiper-description">
-            <h2>VIDEO 1</h2>
-            <p>
-              The Yorkshire Terrier is a British breed of toy dog of terrier
-              type. It is among the smallest of the terriers and indeed of all
-              dog breeds, with a weight of no more than 3.2 kg.
-            </p>
-          </figcaption>
-        </figure>
-        <figure class="swiper-slide">
-          <video src="vdo/video2.mp4" muted autoplay loop></video>
-          <figcaption class="swiper-description">
-            <h2>VIDEO 2</h2>
-            <p>
-              The German Shepherd or Alsatian is a German breed of working dog
-              of medium to large size. The breed was developed by Max von
-              Stephanitz using various traditional German herding dogs from
-              1899.
-            </p>
-          </figcaption>
-        </figure>
-        <figure class="swiper-slide">
-          <video src="vdo/video3.mp4" muted autoplay loop></video>
-          <figcaption class="swiper-description">
-            <h2>VIDEO 3</h2>
-            <p>
-              The American Pit Bull Terrier is a dog breed recognized by the
-              United Kennel Club and the American Dog Breeders Association, but
-              not the American Kennel Club.
-            </p>
-          </figcaption>
-        </figure>
-        <figure class="swiper-slide">
-          <video src="vdo/video4.mp4" muted autoplay loop></video>
-          <figcaption class="swiper-description">
-            <h2>VIDEO 4</h2>
-            <p>
-              The Bulldog is a British breed of dog of mastiff type. It may also
-              be known as the English Bulldog or British Bulldog. It is a medium
-              sized, muscular dog of around 40–55 lb.
-            </p>
-          </figcaption>
-        </figure>
-      </div>
-      <button type="button" class="swiper-button-next"></button>
-      <button type="button" class="swiper-button-prev"></button>
-      <div class="swiper-pagination" style="background-color: white;"></div>
+  <div class="swiper carousel">
+    <div class="swiper-wrapper">
+      <figure class="swiper-slide">
+        <video src="vdo/video1.mp4" muted autoplay loop></video>
+        <figcaption class="swiper-description">
+          <h2>VIDEO 1</h2>
+          <p>
+            The Yorkshire Terrier is a British breed of toy dog of terrier
+          </p>
+        </figcaption>
+      </figure>
+      <figure class="swiper-slide">
+        <video src="vdo/video2.mp4" muted autoplay loop></video>
+        <figcaption class="swiper-description">
+          <h2>VIDEO 2</h2>
+          <p>
+            The German Shepherd or Alsatian is a German breed of working dog
+          </p>
+        </figcaption>
+      </figure>
+      <figure class="swiper-slide">
+        <video src="vdo/video3.mp4" muted autoplay loop></video>
+        <figcaption class="swiper-description">
+          <h2>VIDEO 3</h2>
+          <p>
+            The American Pit Bull Terrier is a dog breed recognized by the
+          </p>
+        </figcaption>
+      </figure>
+      <figure class="swiper-slide">
+        <video src="vdo/video4.mp4" muted autoplay loop></video>
+        <figcaption class="swiper-description">
+          <h2>VIDEO 4</h2>
+          <p>
+            The Bulldog is a British breed of dog of mastiff type. It may also
+          </p>
+        </figcaption>
+      </figure>
     </div>
+    <button type="button" class="swiper-button-next"></button>
+    <button type="button" class="swiper-button-prev"></button>
+    <div class="swiper-pagination" style="background-color: white;">
+    </div>
+  </div>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
@@ -175,18 +154,30 @@
 	</div>
 	<!--División normal-->
 	<div class="divs">
-		<h2>Novedades</h2>
+		<h2 class="divs_title">NOVEDADES</h2>
 	</div>
 	<!--Sección de novedades-->
 	<div class="nove">
-		<div><!--Novedad #1-->
-			
+		<!--Novedad #1-->
+		<div class="gradient-border" id="box">
+			<div class="div_image"><img src="img/novedad1.jpeg" class="novedad_image"></div>
+			<div class="box_body">
+					<h2 class="box_title">TU REGALO PERFECTO PARA MAMÁ</h2>
+			</div>
 		</div>
-		<div><!--Novedad #2-->
-			
+		<!--Novedad #2-->
+		<div class="gradient-border" id="box">
+			<div class="div_image"><img src="img/novedad2.jpeg" class="novedad_image"></div>
+			<div class="box_body">
+					<h2 class="box_title">TOMATODOS, CON DIFERENTES DISEñOS</h2>
+			</div>
 		</div>
-		<div><!--Novedad #3-->
-			
+		<!--Novedad #3-->
+		<div class="gradient-border" id="box">
+			<div class="div_image"><img src="img/novedad3.jpeg" class="novedad_image"></div>
+			<div class="box_body">
+					<h2 class="box_title">CHAQUETAS DE DIFERENTES TAMAñOS</h2>
+			</div>
 		</div>
 	</div>
 	<!--Sección de acceso directo-->
@@ -194,7 +185,6 @@
 		<div class="card">
 			<div class="card__inner">
 				<div class="card__body card__body--front1">
-					<h2 class="acc_title">COMPRA</h2>
 				</div>
 				<div class="card__body card__body--back1">
 					<h2 class="acc_title"><a href="#"> QUIRO'S CLOTHES</a></h2>
@@ -204,7 +194,6 @@
 		<div class="card"><!--Acceso a accesorios-->
 			<div class="card__inner">
 				<div class="card__body card__body--front2">
-					<h2 class="acc_title">COMPRA</h2>
 				</div>
 				<div class="card__body card__body--back2">
 					<h2 class="acc_title"><a href="#">  QUIRO'S ACCESORIES</a></h2>
@@ -215,14 +204,17 @@
 	<!--Footer-->
 	<div class="foot">
 		<div><!--Logo-->
-			
+			<a title="QUIRO'S" href="index.html"><img id=logo src="img/quiro_logo.jpeg" alt="QuiroIlustra"></a>
 		</div>
-		<div><!--Chat a whatsapp-->
-			
+
+		<div class="whats"><!--Chat a whatsapp-->
+		 <a href="https://services.tochat.be/es/api/business/send/7022adf2-b02b-4569-8228-4c08f37c5f9e" target="_blank" class="btn_whats">Escríbenos</a>	
 		</div>
-		<div><!--Correo Electrónico-->
-			
+
+		<div class="email"><!--Correo Electrónico-->
+			<a href="mailto:bell.isa.go@gmail.com" class="btn_email" ><i class="fa-solid fa-envelope"></i>&nbsp;Asuntos Comerciales</a>
 		</div>
+
 		<div class="wrapper"><!--Redes Sociales-->
 			<button class="btn">
 				<i class="ri-share-line"></i>
