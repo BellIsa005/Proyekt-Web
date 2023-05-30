@@ -231,16 +231,20 @@ div{
   grid-template-columns: repeat(4, 300px);
   grid-template-rows: 100px;
   background-color: #370658;
+  border: #370658 1px solid;
   margin-top: 25px;
   place-content: center;
   width: 100%;
 }
-
+.logoclass1{
+  border: #370658 1px solid;
+}
 /*-------Style for Whatsapp link*/
 .whats{
   display: flex;
   justify-content: center;
   align-items: center;
+  border: #370658 1px solid;
 }
 
 .btn_whats{
@@ -260,6 +264,7 @@ div{
   display: flex;
   justify-content: center;
   align-items: center;
+  border: #370658 1px solid;
 }
 .btn_email{
   font-family: arial;
@@ -275,6 +280,7 @@ div{
 /*-------Style for social media*/
 .wrapper {
   position: relative;
+  border: #370658 1px solid;
 }
 .wrapper :is(.btn, .link) {
   display: inline-flex;

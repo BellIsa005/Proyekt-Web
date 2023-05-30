@@ -109,12 +109,12 @@ ul {
 }
 .swiper {
 	margin-top: 100px;
-	width: 500px;
-	height: 700px;
+	width: 600px;
+	height: 600px;
 }
 .swiper-slide {
   position: relative;
-  background-color: #000;
+  background-color: #370658;
 }
 
 .swiper-slide video {
@@ -126,7 +126,7 @@ ul {
 .swiper button {
   width: 50px;
   height: 50px;
-  color: #fff;
+  color: #000;
   background: transparent;
   border: none;
   outline: none;
@@ -156,9 +156,9 @@ ul {
   left: 0;
   bottom: 0;
   z-index: -1;
-  width: 100%;
+  width: 600px;
   height: 100%;
-  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.8) 50%);
+  background-image: linear-gradient(transparent, rgba(55, 6, 88, 0.8) 50%);
 }
 .swiper-description h2 {
   font-size: 42px;
