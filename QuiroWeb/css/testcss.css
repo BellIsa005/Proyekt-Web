@@ -1,127 +1,100 @@
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-.carousel-container {
-    width: 1000px; /*use media query*/
-    margin: 10px auto;
-    min-height: 200px;
-    position: relative;
-    direction: ltr;
-}
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {.carousel-container {
-        width: 80%;
-    }}
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {.carousel-container {
-        width: 80%;
-    }}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {.carousel-container {
-        width: 80%;
-    }}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {.carousel-container {
-        width: 85%;
-    }}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {.carousel-container {
-        width: 85%;
-    }}
-
-.carousel-container .track {
-    display: inline-flex;
-    transition: transform 2s;
-}
-.carousel-container .card-container {
-    width: 255px;
-    height: 350px;
-    padding-right: 15px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    /*border: 1px solid orange;*/
-    flex-shrink: 0;
-    direction: rtl;
 }
-.carousel-container .card-container .card {
+html,
+body {
     height: 100%;
-    width: 100%;
-    border: 1px solid #cccccc;
-    box-sizing: border-box;
-    border-radius: 5px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2b2b2d;
+    display: grid;
+    place-content: center;
+}
+/* ======================== */
+.product-card {
     display: flex;
     flex-direction: column;
-}
-.carousel-container .carousel-inner {
-    overflow: hidden;
-}
-.nav .arrow {
-    width: 60px;
-    height: 60px;
-    border: 1px solid #aaaaaa;
+    row-gap: 16px;
+    width: 280px;
+    background-color: #fff;
     padding: 10px;
+    border-radius: 8px;
+    overflow-y: hidden;
+}
+.product-card__image {
+    display: block;
+    max-width: 100%;
+    animation: fadeIn 0.25s;
+}
+.product-card__caption {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #2b2b2d;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 1px;
+    padding: 20px;
+    border-radius: inherit;
+    animation: fadeIn 0.5s;
+}
+.product-card__title {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.product-card__subtitle {
+    color: #d8d7e3;
+}
+.product-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.product-card__price {
+    font-weight: 600;
+}
+.product-card__button {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #03d7c9;
+    color: #fff;
+    outline: none;
+    border: none;
     border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     cursor: pointer;
+    transition: background-color 0.25s;
 }
-
-.nav div{
-    background: rgba(222,222,222,0.6);
+.product-card__button:hover,
+.product-card__button:focus {
+    background-color: #01bdb0;
 }
-.nav div:hover{
-    background: rgba(222,222,222,0.2);
+.product-card__icon {
+    font-size: 18px;
+    transition: transform 0.25s;
 }
-.nav div span{
-    font-size: 2em;
-    color: red;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.product-card__button:hover .product-card__icon,
+.product-card__button:focus .product-card__icon {
+    transform: rotate(1turn);
 }
-.nav .right {
-    right: -30px;
-}
-
-.nav .left {
-    left: -30px;
-    display: none;
-}
-.nav .right.hide {
-    display: none;
-}
-
-.nav .right.show {
-    display: block;
-}
-.nav .left.show {
-    display: block;
-}
-.card > * {
-    flex: 0;
-}
-.card .img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    flex-grow: 1;
-}
-.card img {
-    width: 100%;
-    min-height: 150px;
-    max-height: 300px;
-}
-.card .info {
-    flex-basis: 40px;
-    flex-grow: 0;
-    background: #333333;
-    color: #ffffff;
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: justify;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

@@ -1,0 +1,288 @@
+body{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(7, auto-fit);
+	background-color: #370658;
+	font-family: courier new;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+/*Delete this divs style*/
+/*div{
+	border: white 1px solid;
+}*/
+
+/*--------COMIENZO DE LA DIVISIÓN CALLED MAINMENU*/
+.mainmenu{
+	display: grid;
+	grid-template-columns: 20% 60% 20%;
+	grid-template-rows: 100px;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	align-items: center;
+	justify-items: center;
+	z-index: 5;
+}
+
+/*--------Comienzo de la parte del logo*/
+#logo{
+	margin: auto;
+	width: 30%;
+	height: 95%;
+}
+/*--------Fin de la parte del logo*/
+/*--------Comienzo de la parte del menú para navegar*/
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav {
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.link {
+  position: relative;
+  display: inline-block;
+}
+.link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  border-radius: 4px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+}
+.link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.submenu {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 90px;
+  background-color: #fff;
+  padding: 10px;
+  transition: opacity 0.25s;
+}
+.link:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+}
+/*--------Fin de la parte del menú para navegar*/
+/*--------Comienzo de la parte del carrito*/
+
+
+
+/*--------Fin de la parte del carrito*/
+/*--------FIN DE LA DIVISIÓN CALLED MAINMENU*/
+/*--------COMIENZO DE LA DIVISIÓN CALLED ACCESORIOS*/
+.accesorios{
+  display: grid;
+  grid-template-rows: repeat(3, 480px);
+  grid-template-columns: repeat(3, 300px);
+  column-gap: 15px;
+  row-gap: 30px;
+  margin-top: 130px;
+  margin-bottom: 30px;
+  place-content: center;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    width: 280px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-y: hidden;
+}
+.product-card__image {
+    display: block;
+    max-width: 100%;
+    animation: fadeIn 0.25s;
+}
+.product-card__caption {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #2b2b2d;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 1px;
+    padding: 20px;
+    border-radius: inherit;
+    animation: fadeIn 0.5s;
+}
+.product-card__title {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.product-card__subtitle {
+    color: #d8d7e3;
+}
+.product-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.product-card__price {
+    font-weight: 600;
+}
+.product-card__button {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #03d7c9;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+.product-card__button:hover,
+.product-card__button:focus {
+    background-color: #01bdb0;
+}
+.product-card__icon {
+    font-size: 18px;
+    transition: transform 0.25s;
+}
+.product-card__button:hover .product-card__icon,
+.product-card__button:focus .product-card__icon {
+    transform: rotate(1turn);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*--------FIN DE LA DIVISIÓN CALLED ACCESORIOS*/
+/*------COMIENZO DE LA DIVISIÓN CALLED FOOT*/
+.foot{
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: 100px;
+  width: 100%;
+  place-content: center;
+}
+
+/*-------Style for Whatsapp link*/
+.whats{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_whats{
+  font-family: arial;
+  color: white;
+  font-weight: bold;
+  padding: 1em 2em 1em 3.5em;
+  border-radius: 2em;
+  background: #25d366 url('https://tochat.be/click-to-chat-directory/css/whatsapp.svg') 
+  no-repeat 1.5em center;
+  background-size: 1.6em;
+}
+/*-------End for Whatsapp link*/
+
+/*-------Style for email link*/
+.email{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn_email{
+  font-family: arial;
+  color: #370658;
+  font-weight: bold;
+  padding: 1em 2em 1em 2em;
+  border-radius: 2em;
+  background: #fff;
+  background-size: 1.6em;
+}
+/*-------End for email link*/
+
+/*-------Style for social media*/
+.wrapper {
+  position: relative;
+}
+.wrapper :is(.btn, .link) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  color: #151515;
+  border-radius: 50%;
+}
+.btn {
+  position: absolute;
+  top: 20px;
+  left: 125px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.active .btn,
+.btn:hover {
+  outline: 3px solid #0561ee;
+  outline-offset: -4px;
+}
+.item {
+  position: absolute;
+  top: 20px;
+  left: 125px;
+  list-style: none;
+  transition: transform 0.5s;
+  transition-delay: var(--d);
+}
+.wrapper.active .item:nth-child(1) {
+  transform: translateX(-65px);
+}
+.wrapper.active .item:nth-child(2) {
+  transform: translateX(65px);
+}
+.link:hover {
+  color: #fff;
+  transition: background-color 0.5s;
+}
+.ig:hover {
+  background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+.fb:hover {
+  background-color: #4267B2;
+}
+
+
