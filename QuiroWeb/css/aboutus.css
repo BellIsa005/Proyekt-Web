@@ -1,119 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: repeat(8, auto-fit);
   background-color: #000;
   font-family: courier new;
+  padding: 0;
 }
 
 img {
   display: block;
-  max-width: 100%;
 }
-
-/*Delete this divs style*/
-div{
-  border: #000 1px solid;
-}
-
-
 
 /*--------COMIENZO DE LA DIVISIÓN CALLED MAINMENU*/
-    .mainmenu{
-        display: grid;
-        grid-template-columns: 20% 60% 20%;
-        grid-template-rows: 100px;
-        background-color: #fff;
-        position: fixed;
-        top: 0;
-        left: 0;
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+}
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding-block: 15px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 8;
+}
+.navbar a {
+    text-decoration: none;
+    color: #000;
+}
+.logo {
+    margin-right: 50px;
+}
+.logoimg {
+  height: 100%;
+  width: 30px;
+}
+.list {
+  list-style: none;
+  display: flex;
+  column-gap: 30px;
+}
+.link {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+}
+.link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  border-radius: 4px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+}
+.link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.submenu {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 90px;
+  background-color: #fff;
+  padding: 10px;
+  transition: opacity 0.25s;
+  row-gap: 15px;
+}
+
+.link:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+}
+#toggler,
+.navbar label {
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .menu {
         width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .list {
+        flex-direction: column;
         align-items: center;
-        justify-items: center;
-        z-index: 5;
-        border: #fff 1px solid;
+        padding: 15px;
+        row-gap: 15px;
     }
-
-    /*--------Comienzo de la parte del logo*/
-    .logoclass{
-      border: #fff 1px solid;   
-    }
-    #logo{
-        margin: auto;
-        width: 30%;
-        height: 95%;
-    }
-    /*--------Fin de la parte del logo*/
-    /*--------Comienzo de la parte del menú para navegar*/
-    a {
-      text-decoration: none;
-      color: #000;
-    }
-
-    nav {
-      color: #000;
-      display: flex;
-      align-items: center;
-      gap: 25px;
-    }
-    ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
+    .navbar label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
     }
     .link {
-      position: relative;
-      display: inline-block;
-    }
-    .link::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 2px;
-      background-color: #000;
-      border-radius: 4px;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.25s;
-    }
-    .link:hover::before {
-      transform: scaleX(1);
-      transform-origin: left;
+        font-size: 15px;
     }
     .submenu {
-      visibility: hidden;
-      display: flex;
-      flex-direction: column;
-      opacity: 0;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 90px;
-      background-color: #fff;
-      padding: 10px;
-      transition: opacity 0.25s;
+        position: relative;
+        width: 100%;
+        display: none;
     }
     .link:hover .submenu {
-      visibility: visible;
-      opacity: 1;
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
     }
-/*--------Fin de la parte del menú para navegar*/
+
+    #toggler:checked ~ .menu {
+        max-height: 100%;
+    }
+}
 /*--------Comienzo de la parte del carrito*/
-
-
-
 /*--------Fin de la parte del carrito*/
 /*--------FIN DE LA DIVISIÓN CALLED MAINMENU*/
 /*--------COMIENZO DE LA DIVISIÓN CALLED PRIMER TÍTULO*/
     .firsttitle{
       height: 300px;
+      width: 100%;
       margin-top: 105px;
     }
     .fondotitle{
       height: 300px;
       width: 100%;
+      border: #000 1px solid;
       position: relative;
       background-image: url(../img/firsttitle.jpeg);
       background-position: center;
@@ -125,19 +153,37 @@ div{
       text-align: center;
       font-size: 40px;
       background-color: rgba(85, 84, 84, 0.5);
-
     }
+@media screen and (max-width: 600px) {
+    .firsttitle{
+      height: 150px;
+      margin-top: 60px;
+    }
+    .fondotitle{
+      height: 150px;
+    }
+    #titles{
+      margin-top: 65px;
+      color: #fff;
+      text-align: center;
+      font-size: 20px;
+      background-color: rgba(85, 84, 84, 0.5);
+    }
+}
 /*--------FIN DE LA DIVISIÓN CALLED PRIMER TÍTULO*/
 /*--------COMIENZO DE LA DIVISIÓN CALLED INTRODUCCIÓN*/
 .intro{
   display: grid;
-  grid-template-columns: 500px;
+  grid-template-columns: 100%;
   grid-template-rows: 100px 200px;
   margin: auto;
   color: #fff;
   align-items: center;
+  justify-items: center;
 }
   .introtitle{
+    display: block;
+    width: 700px;
     text-align: center;
     font-size: 15px;
     border-bottom-color: #370658;
@@ -145,188 +191,372 @@ div{
     border-bottom-width: 6px;
   }
   .introparag{
+    display: block;
+    width: 700px;
     text-align: center;
     font-size: 15px;
   }
+@media screen and (max-width: 600px) {
+  .intro{
+    display: grid;
+    grid-template-rows: 50px 70px;
+  }
+  .introtitle{
+    display: block;
+    width: 100%;
+    font-size: 7px;
+    border-bottom-width: 3px;
+  }
+  .introparag{
+    display: block;
+    width: 100%;
+    font-size: 7px;
+  }
+}
 /*--------FIN DE LA DIVISIÓN CALLED INTRODUCCIÓN*/
 /*--------COMIENZO DE LA DIVISIÓN CALLED FERIAS*/
-.ferias{
+.ferias {
   display: grid;
-  grid-template-columns: 200px 500px;
+  grid-template-columns: 40% 60%;
   grid-template-rows: 300px;
   column-gap: 20px;
   color: #fff;
-  margin: auto;
   align-items: center;
+  justify-items: center;
 }
-.feriaimg{
+.feriaimg {
+  display: block;
+  margin-left: 150px;
+  height: 250px;
+  width: 250px;
   border-radius: 50%;
 }
-.feriaparag{
+.feriaparag {
+    display: block;
+    margin-right: 150px;
+    width: 450px;
     text-align: center;
     font-size: 15px;
+}
+@media screen and (max-width: 900px) {
+  .ferias{
+    display: grid;
+    grid-template-rows: 200px;
+    margin-top: 50px;
   }
+  .feriaimg {
+    margin-left: 75px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+  .feriaparag {
+      margin-right: 75px;
+      width: 300px;
+      text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .ferias{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 150px;
+    margin-top: 20px;
+  }
+  .feriaimg {
+    margin-left: 0px;
+    height: 120px;
+    width: 120px;
+  }
+  .feriaparag {
+    margin-right: 0px;
+    width: 250px;
+    font-size: 7px;
+  }  
+}
 /*--------FIN DE LA DIVISIÓN CALLED FERIAS*/
 /*--------COMIENZO DE LA DIVISIÓN CALLED CLIENTES*/
 .clientes{
   display: grid;
-  grid-template-columns: 500px 200px;
+  grid-template-columns: 60% 40%;
   grid-template-rows: 300px;
   column-gap: 20px;
   color: #fff;
-  margin: auto;
   align-items: center;
+  justify-items: center;  
 }
-.clienteimg{
+.clientesimg{
+  display: block;
+  margin-right: 150px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
 }
 .clientesparag{
+  display: block;
+  margin-left: 150px;
+  width: 450px;
   text-align: center;
   font-size: 15px;
+}
+@media screen and (max-width: 900px) {
+  .clientes{
+    display: grid;
+    grid-template-rows: 200px;
+    margin-top: 50px;
+  }
+  .clientesimg {
+    margin-right: 75px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+  .clientesparag {
+      margin-left: 75px;
+      width: 300px;
+      text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .clientes{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 150px;
+    margin-top: 0px;
+  }
+  .clientesimg {
+    margin-right: 0px;
+    height: 120px;
+    width: 120px;
+  }
+  .clientesparag {
+    margin-left: 0px;
+    width: 250px;
+    font-size: 7px;
+  }  
 }
 /*--------FIN DE LA DIVISIÓN CALLED CLIENTES*/
 /*--------COMIENTO DE LA DIVISIÓN CALLED SEGUNDO TÍTULO*/
 .secondtitle{
   height: 300px;
+  width: 100%;
+  margin-top: 50px;
 }
-  .fondosecondtitle{
-    height: 300px;
-    width: 100%;
-    position: relative;
-    background-image: url(../img/secondtitle.jpeg);
-    background-position: center;
-    background-size: cover; 
-  }
+.fondosecondtitle{
+  height: 300px;
+  width: 100%;
+  border: #000 1px solid;
+  background-image: url(../img/secondtitle.jpeg);
+  background-position: center;
+  background-size: cover; 
+}
+@media screen and (max-width: 600px) {
+    .secondtitle{
+      height: 150px;
+    }
+    .fondosecondtitle{
+      height: 150px;
+    }
+}
 /*--------FIN DE LA DIVISIÓN CALLED SEGUNDO TÍTULO*/
 /*--------COMIENZO DE LA DIVISIÓN CALLED FUNDADOR*/
 .fundador{
   display: grid;
-  grid-template-columns: 500px;
+  grid-template-columns: 100%;
   grid-template-rows: 100px 200px 300px;
   margin: auto;
   color: #fff;
   align-items: center;
+  justify-items: center;
 }
+.fundadortitle{
+  display: block;
+  width: 700px;
+  text-align: center;
+  font-size: 15px;
+  border-bottom-color: #370658;
+  border-bottom-style: solid;
+  border-bottom-width: 6px;
+}
+.fundadorparag{
+  display: block;
+  width: 600px;
+  text-align: center;
+  font-size: 15px;
+}
+.fundadorimg{
+  display: block;
+  height: 100%;
+  width: 300px;
+  margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .fundador{
+    display: grid;
+    grid-template-rows: 50px 70px 200px;
+  }
   .fundadortitle{
-    text-align: center;
-    font-size: 15px;
-    border-bottom-color: #370658;
-    border-bottom-style: solid;
-    border-bottom-width: 6px;
+    display: block;
+    width: 100%;
+    font-size: 7px;
+    border-bottom-width: 3px;
   }
   .fundadorparag{
-    text-align: center;
-    font-size: 15px;
+    display: block;
+    width: 90%;
+    font-size: 7px;
   }
   .fundadorimg{
     display: block;
     height: 100%;
-    width: 300px;
-    margin: auto;
+    width: 120px;
   }
+}
 /*--------FIN DE LA DIVISIÓN CALLED FUNDADOR*/
 /*------COMIENZO DE LA DIVISIÓN CALLED FOOT*/
 .foot{
-  display: grid;
-  grid-template-columns: repeat(4, 300px);
-  grid-template-rows: 100px;
-  background-color: #370658;
-  border: #370658 1px solid;
-  margin-top: 25px;
-  place-content: center;
-  width: 100%;
+    margin: 0 auto;
+    padding: 15;
+    background-color: #370658;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 70px;
+    column-gap: 15px;
+    max-width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    place-content: center;
 }
-.logoclass1{
-  border: #370658 1px solid;
+/*-------Style for logo image*/
+.logoquiro{
+    margin: auto;
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
 }
+.logoimg2 {
+    height: 100%;
+    width: 70px;
+}
+
 /*-------Style for Whatsapp link*/
 .whats{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: #370658 1px solid;
+    margin: auto;
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn_whats{
-  font-family: arial;
-  color: white;
-  font-weight: bold;
-  padding: 1em 2em 1em 3.5em;
-  border-radius: 2em;
-  background: #25d366 url('https://tochat.be/click-to-chat-directory/css/whatsapp.svg') 
-  no-repeat 1.5em center;
-  background-size: 1.6em;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 1em 2em 1em 3.5em;
+    border-radius: 2em;
+    background: #25d366 url('https://tochat.be/click-to-chat-directory/css/whatsapp.svg') 
+    no-repeat 1.5em center;
+    background-size: 1.6em;
 }
 /*-------End for Whatsapp link*/
 
 /*-------Style for email link*/
 .email{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: #370658 1px solid;
+    margin: auto;
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
 }
 .btn_email{
-  font-family: arial;
-  color: #370658;
-  font-weight: bold;
-  padding: 1em 2em 1em 2em;
-  border-radius: 2em;
-  background: #fff;
-  background-size: 1.6em;
+    color: #370658;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0.5em 2em 0.5em 2em;
+    border-radius: 2em;
+    background: #fff;
 }
 /*-------End for email link*/
 
 /*-------Style for social media*/
 .wrapper {
-  position: relative;
-  border: #370658 1px solid;
+    margin: auto;
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
-.wrapper :is(.btn, .link) {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  background-color: #fff;
-  color: #151515;
-  border-radius: 50%;
+.wrapper :is(.btn, .links) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #151515;
+    border-radius: 50%;
 }
 .btn {
-  position: absolute;
-  top: 20px;
-  left: 125px;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
+    position: absolute;
+    left: 35px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
 }
 .active .btn,
 .btn:hover {
-  outline: 3px solid #0561ee;
-  outline-offset: -4px;
+    outline: 3px solid #0561ee;
+    outline-offset: -4px;
 }
 .item {
-  position: absolute;
-  top: 20px;
-  left: 125px;
-  list-style: none;
-  transition: transform 0.5s;
-  transition-delay: var(--d);
+    position: absolute;
+    bottom: -25px;
+    left: 35px;
+    list-style: none;
+    transition: transform 0.5s;
+    transition-delay: var(--d);
 }
 .wrapper.active .item:nth-child(1) {
-  transform: translateX(-65px);
+    transform: translateX(-65px);
 }
 .wrapper.active .item:nth-child(2) {
-  transform: translateX(65px);
+    transform: translateX(65px);
 }
-.link:hover {
-  color: #fff;
-  transition: background-color 0.5s;
+.links:hover {
+    color: #fff;
+    transition: background-color 0.5s;
 }
 .ig:hover {
-  background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
 }
 .fb:hover {
-  background-color: #4267B2;
+    background-color: #4267B2;
+}
+@media screen and (max-width: 600px) {
+    .btn_whats{
+        padding: 0.5em 1em 0.5em 1.7em;
+        background-size: 1em;
+        font-size: 10px;
+        text-align: right;
+        margin-bottom: 10px;
+    }
+    .btn_email{
+        font-size: 10px;
+        text-align: center;
+        padding: 0.25em 1em 0.25em 1em;
+        margin-bottom: 10px;
+    }
+    .wrapper :is(.btn, .links) {
+        width: 30px;
+        height: 30px;
+    }
+    .item {
+        bottom: 6px;
+    }
+    .btn{
+        bottom: 6px;
+    }
 }
 /*------FIN DE LA DIVISIÓN CALLED FOOT*/

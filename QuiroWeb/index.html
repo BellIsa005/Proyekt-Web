@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<title>Quiro Ilustra</title>
+	<link rel="stylesheet" type="text/css" href="css/styleindex.css">
+	<title>QUIRO ILUSTRA</title>
 
 	<!--Link para animación en redes sociales-->
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"/>
@@ -13,21 +13,23 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
   <!--Ícono para el email-->
-  <script src="https://kit.fontawesome.com/c7958308f5.js" crossorigin="anonymous"></script>
-
-
-
-
+  <script 
+      src="https://kit.fontawesome.com/c7958308f5.js" crossorigin="anonymous">
+  </script>
 </head>
 <body>
-	<!--Encabezado-->
-	<div class="mainmenu">
-		<div class="logoclass"><!--Logo y página principal-->
-			<a title="QUIRO'S" href="index.html"><img id=logo src="img/quiro_logo.jpeg" alt="QuiroIlustra" width="30%" height="30%"></a>
-		</div>
-		<!--Pestañas principales-->
-		<nav>
-		  <ul>
+<!--Encabezado-->
+<nav class="navbar container">
+<!--Logo y página principal-->
+			<a title="QUIRO'S" href="index.html" class=logo><img class=logoimg src="img/quiro_logo.jpeg" alt="QuiroIlustra"></a>
+
+<!--Para un menú responsivo-->
+		<input type="checkbox" id="toggler" />
+    <label for="toggler"><i class="ri-menu-line"></i></label>
+
+<!--Pestañas principales-->
+		<div class="menu">
+		  <ul class="list">
 		  	<li class="link">
 		      <a href="aboutus.html">About us</a>
 		    </li>
@@ -45,12 +47,14 @@
 		      <a href="#">Release</a>
 		    </li>
 		  </ul>
-		</nav>
+		</div>
 		<div><!--Carrito-->
 			
 		</div>
-	</div>
-	<!--Sección de Videos-->
+</nav>
+
+<!--Sección de Videos-->
+<div class="videos">
   <div class="swiper carousel">
     <div class="swiper-wrapper">
       <figure class="swiper-slide">
@@ -92,9 +96,10 @@
     </div>
     <button type="button" class="swiper-button-next"></button>
     <button type="button" class="swiper-button-prev"></button>
-    <div class="swiper-pagination" style="background-color: white;">
+    <div class="swiper-pagination">
     </div>
   </div>
+ </div>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
@@ -110,144 +115,164 @@
       })
     </script>
 
-	<!--Caracteristicas de Quiro-->
-	<div class="carcts">
-		<figure class="crt"><!--Caracteristica #1-->
-			<img
-				src="img/bolivia.jpeg"
-				alt="bolivia_lapaz"
-				class="crt_image"
-			/>
-			<figcaption class="crt_body">
-				<h2 class="crt_title">Productos</h2>
-				<p class="crt_description">
-					Hecho por manos bolivianas
-				</p>
-			</figcaption>
-		</figure>
-		<figure class="crt"><!--Caracteristica #2-->
-			<img
-				src="img/gran_poder.jpeg"
-				alt="gran_poder_lapaz"
-				class="crt_image"
-			/>
-			<figcaption class="crt_body">
-				<h2 class="crt_title">Diseño</h2>
-				<p class="crt_description">
-					Que muestra nuestra cultura y tradición
-				</p>
-			</figcaption>
-		</figure>
-		<figure class="crt"><!--Caracteristica #3-->
-			<img
-				src="img/bus.jpeg"
-				alt="bus_in_lapaz"
-				class="crt_image"
-			/>
-			<figcaption class="crt_body">
-				<h2 class="crt_title">Estilo</h2>
-				<p class="crt_description">
-					Con diseños únicos
-				</p>
-			</figcaption>
-		</figure>
-	</div>
-	<!--División normal-->
-	<div class="divs">
-		<h2 class="divs_title">NOVEDADES</h2>
-	</div>
-	<!--Sección de novedades-->
-	<div class="nove">
-		<!--Novedad #1-->
-		<div class="gradient-border" id="box">
-			<div class="div_image"><img src="img/novedad1.jpeg" class="novedad_image"></div>
-			<div class="box_body">
-					<h2 class="box_title">TU REGALO PERFECTO PARA MAMÁ</h2>
-			</div>
-		</div>
-		<!--Novedad #2-->
-		<div class="gradient-border" id="box">
-			<div class="div_image"><img src="img/novedad2.jpeg" class="novedad_image"></div>
-			<div class="box_body">
-					<h2 class="box_title">TOMATODOS, CON DIFERENTES DISEñOS</h2>
-			</div>
-		</div>
-		<!--Novedad #3-->
-		<div class="gradient-border" id="box">
-			<div class="div_image"><img src="img/novedad3.jpeg" class="novedad_image"></div>
-			<div class="box_body">
-					<h2 class="box_title">CHAQUETAS DE DIFERENTES TAMAñOS</h2>
-			</div>
-		</div>
-	</div>
-	<!--Sección de acceso directo-->
-	<div class="access">
-		<div class="card">
-			<div class="card__inner">
-				<div class="card__body card__body--front1">
-				</div>
-				<div class="card__body card__body--back1">
-					<h2 class="acc_title"><a href="#"> QUIRO'S CLOTHES</a></h2>
-				</div>
-			</div>
-		</div>
-		<div class="card"><!--Acceso a accesorios-->
-			<div class="card__inner">
-				<div class="card__body card__body--front2">
-				</div>
-				<div class="card__body card__body--back2">
-					<h2 class="acc_title"><a href="#">  QUIRO'S ACCESORIES</a></h2>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--Footer-->
-	<div class="foot">
-		<div><!--Logo-->
-			<a title="QUIRO'S" href="index.html"><img id=logo src="img/quiro_logo.jpeg" alt="QuiroIlustra"></a>
-		</div>
+<!--División normal-->
+  <div class="divs">
+    <h2 class="divs_title">CARACTERÍSTICAS</h2>
+  </div>
 
-		<div class="whats"><!--Chat a whatsapp-->
-		 <a href="https://services.tochat.be/es/api/business/send/7022adf2-b02b-4569-8228-4c08f37c5f9e" target="_blank" class="btn_whats">Escríbenos</a>	
-		</div>
+<!--Caracteristicas de Quiro-->
+<div class="carcts">
+<!--Caracteristica #1-->
+    <figure class="crt">
+      <img
+        src="img/bolivia.jpeg"
+        alt="bolivia_lapaz"
+        class="crt_image"
+      />
+      <figcaption class="crt_body">
+        <h2 class="crt_title">Productos</h2>
+        <p class="crt_description">
+          Hecho por manos bolivianas
+        </p>
+      </figcaption>
+    </figure>
+<!--Caracteristica #2-->
+    <figure class="crt">
+      <img
+        src="img/gran_poder.jpeg"
+        alt="gran_poder_lapaz"
+        class="crt_image"
+      />
+      <figcaption class="crt_body">
+        <h2 class="crt_title">Diseño</h2>
+        <p class="crt_description">
+          Que muestra nuestra cultura y tradición
+        </p>
+      </figcaption>
+    </figure>
+<!--Caracteristica #3-->
+    <figure class="crt">
+      <img
+        src="img/bus.jpeg"
+        alt="bus_in_lapaz"
+        class="crt_image"
+      />
+      <figcaption class="crt_body">
+        <h2 class="crt_title">Estilo</h2>
+        <p class="crt_description">
+          Con diseños únicos
+        </p>
+      </figcaption>
+    </figure>
+</div>
 
-		<div class="email"><!--Correo Electrónico-->
-			<a href="mailto:bell.isa.go@gmail.com" class="btn_email" ><i class="fa-solid fa-envelope"></i>&nbsp;Asuntos Comerciales</a>
-		</div>
+<!--División normal-->
+  <div class="divs">
+    <h2 class="divs_title">NOVEDADES</h2>
+  </div>
 
-		<div class="wrapper"><!--Redes Sociales-->
-			<button class="btn">
-				<i class="ri-share-line"></i>
-			</button>
-			<ul class="list">
-				<li class="item">
-					<a href="https://www.instagram.com/quiroilustra/" class="link ig">
-						<i class="ri-instagram-line"></i>
-					</a>
-				</li>
-				<li class="item" style="--d: 0.20s">
-					<a href="https://www.facebook.com/quiroilustraciones/?ref=page_internal" class="link fb">
-						<i class="ri-facebook-line"></i>
-					</a>
-				</li>
-			</ul>
-		</div>
-		<script>
-			const btnEl = document.querySelector('.btn')
-			const toggleOptions = () => {
-				const wrapperEl = document.querySelector('.wrapper')
-				const iconEl = btnEl.querySelector('i')
+<!--Sección de novedades-->
+<div class="nove">
+  <!--Novedad #1-->
+    <div class="gradient-border" id="box">
+      <div class="div_image"><img src="img/novedad1.jpeg" class="novedad_image"></div>
+      <div class="box_body">
+          <h2 class="box_title">TU REGALO PERFECTO PARA MAMÁ</h2>
+      </div>
+    </div>
+  <!--Novedad #2-->
+    <div class="gradient-border" id="box">
+      <div class="div_image"><img src="img/novedad2.jpeg" class="novedad_image"></div>
+      <div class="box_body">
+          <h2 class="box_title">TOMATODOS, CON DIFERENTES DISEñOS</h2>
+      </div>
+    </div>
+  <!--Novedad #3-->
+    <div class="gradient-border" id="box">
+      <div class="div_image"><img src="img/novedad3.jpeg" class="novedad_image"></div>
+      <div class="box_body">
+          <h2 class="box_title">CHAQUETAS DE DIFERENTES TAMAñOS</h2>
+      </div>
+    </div>
+</div>
 
-				wrapperEl.classList.toggle('active')
+<!--División normal-->
+  <div class="divs">
+    <h2 class="divs_title">DESCUBRE MÁS</h2>
+  </div>
 
-				if (iconEl.classList.contains('ri-share-line')) {
-					iconEl.classList.replace('ri-share-line', 'ri-close-line')
-				} else {
-					iconEl.classList.replace('ri-close-line', 'ri-share-line')
-				}
-			}
-			btnEl.addEventListener('click', toggleOptions)
-		</script>
-	</div>
+<!--Sección de acceso directo-->
+<div class="access">
+  <!--Acceso a ropa-->
+    <div class="card">
+      <div class="card__inner">
+        <div class="card__body card__body--front1">
+        </div>
+        <div class="card__body card__body--back1">
+          <h2 class="acc_title"><a href="#"> WOMAN'S CLOTHES</a></h2>
+          <h2 class="acc_title"><a href="#"> MAN'S CLOTHES</a></h2>
+        </div>
+      </div>
+    </div>
+  <!--Acceso a accesorios-->
+    <div class="card">
+      <div class="card__inner">
+        <div class="card__body card__body--front2">
+        </div>
+        <div class="card__body card__body--back2">
+          <h2 class="acc_title"><a href="#">  QUIRO'S ACCESORIES</a></h2>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Footer-->
+  <div class="foot">
+    <div class="logoquiro"><!--Logo-->
+      <a title="QUIRO'S" href="index.html" class=logo2><img class=logoimg2 src="img/quiro_logo.jpeg" alt="QuiroIlustra"></a>
+    </div>
+
+    <div class="whats"><!--Chat a whatsapp-->
+     <a href="https://services.tochat.be/es/api/business/send/7022adf2-b02b-4569-8228-4c08f37c5f9e" target="_blank" class="btn_whats">Escríbenos</a>  
+    </div>
+
+    <div class="email"><!--Correo Electrónico-->
+      <a href="mailto:bell.isa.go@gmail.com" class="btn_email" ><i class="fa-solid fa-envelope"></i>&nbsp;Asuntos Comerciales</a>
+    </div>
+
+    <div class="wrapper"><!--Redes Sociales-->
+      <button class="btn">
+        <i class="ri-share-line"></i>
+      </button>
+      <ul class="list">
+        <li class="item">
+          <a href="https://www.instagram.com/quiroilustra/" class="links ig">
+            <i class="ri-instagram-line"></i>
+          </a>
+        </li>
+        <li class="item" style="--d: 0.20s">
+          <a href="https://www.facebook.com/quiroilustraciones/?ref=page_internal" class="links fb">
+            <i class="ri-facebook-line"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const btnEl = document.querySelector('.btn')
+      const toggleOptions = () => {
+        const wrapperEl = document.querySelector('.wrapper')
+        const iconEl = btnEl.querySelector('i')
+
+        wrapperEl.classList.toggle('active')
+
+        if (iconEl.classList.contains('ri-share-line')) {
+          iconEl.classList.replace('ri-share-line', 'ri-close-line')
+        } else {
+          iconEl.classList.replace('ri-close-line', 'ri-share-line')
+        }
+      }
+      btnEl.addEventListener('click', toggleOptions)
+    </script>
+  </div>
 </body>
 </html>
