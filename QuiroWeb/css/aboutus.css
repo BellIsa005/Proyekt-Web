@@ -203,13 +203,13 @@ img {
   }
   .introtitle{
     display: block;
-    width: 100%;
+    width: 90%;
     font-size: 7px;
     border-bottom-width: 3px;
   }
   .introparag{
     display: block;
-    width: 100%;
+    width: 90%;
     font-size: 7px;
   }
 }

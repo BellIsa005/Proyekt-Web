@@ -12,14 +12,18 @@
 
 </head>
 <body>
-	<!--Encabezado-->
-<div class="mainmenu">
-		<div><!--Logo y página principal-->
-			<a title="mainlogo" href="index.html"><img id=logo src="img/quiro_logo.jpeg" alt="QuiroIlustra" width="30%" height="30%"></a>
-		</div>
-		<!--Pestañas principales-->
-		<nav>
-		  <ul>
+<!--Encabezado-->
+<nav class="navbar container">
+<!--Logo y página principal-->
+			<a title="QUIRO'S" href="index.html" class=logo><img class=logoimg src="img/quiro_logo.jpeg" alt="QuiroIlustra"></a>
+
+<!--Para un menú responsivo-->
+	<input type="checkbox" id="toggler" />
+    <label for="toggler"><i class="ri-menu-line"></i></label>
+
+<!--Pestañas principales-->
+		<div class="menu">
+		  <ul class="list">
 		  	<li class="link">
 		      <a href="aboutus.html">About us</a>
 		    </li>
@@ -37,11 +41,11 @@
 		      <a href="#">Release</a>
 		    </li>
 		  </ul>
-		</nav>
+		</div>
 		<div><!--Carrito-->
 			
 		</div>
-	</div>
+</nav>
 	<!--Cuerpo-->
 	<div class="carousel-container">
 	    <div class="carousel-inner">
@@ -134,39 +138,53 @@
 	    </div>
 	</div>
 	<script src="js/clovarcarousel.js"></script>
-		<!--Footer-->
-	<div class="foot">
-		<div><!--Logo-->
-			<a title="QUIRO'S" href="index.html"><img id=logo src="img/quiro_logo.jpeg" alt="QuiroIlustra"></a>
-		</div>
+<!--Footer-->
+  <footer class="foot">
+    <div class="logoquiro"><!--Logo-->
+      <a title="QUIRO'S" href="index.html" class=logo2><img class=logoimg2 src="img/quiro_logo.jpeg" alt="QuiroIlustra"></a>
+    </div>
 
-		<div class="whats"><!--Chat a whatsapp-->
-		 <a href="https://services.tochat.be/es/api/business/send/7022adf2-b02b-4569-8228-4c08f37c5f9e" target="_blank" class="btn_whats">Escríbenos</a>	
-		</div>
+    <div class="whats"><!--Chat a whatsapp-->
+     <a href="https://services.tochat.be/es/api/business/send/7022adf2-b02b-4569-8228-4c08f37c5f9e" target="_blank" class="btn_whats">Escríbenos</a>  
+    </div>
 
-		<div class="email"><!--Correo Electrónico-->
-			<a href="mailto:bell.isa.go@gmail.com" class="btn_email" ><i class="fa-solid fa-envelope"></i>&nbsp;Asuntos Comerciales</a>
-		</div>
+    <div class="email"><!--Correo Electrónico-->
+      <a href="mailto:bell.isa.go@gmail.com" class="btn_email" ><i class="fa-solid fa-envelope"></i>&nbsp;Asuntos Comerciales</a>
+    </div>
 
-		<div class="wrapper"><!--Redes Sociales-->
-			<button class="btn">
-				<i class="ri-share-line"></i>
-			</button>
-			<ul class="list">
-				<li class="item">
-					<a href="https://www.instagram.com/quiroilustra/" class="link ig">
-						<i class="ri-instagram-line"></i>
-					</a>
-				</li>
-				<li class="item" style="--d: 0.20s">
-					<a href="https://www.facebook.com/quiroilustraciones/?ref=page_internal" class="link fb">
-						<i class="ri-facebook-line"></i>
-					</a>
-				</li>
-			</ul>
-		</div>
-	<script src="js/clovarfoot.js">
-	</script>
-	</div>
+    <div class="wrapper"><!--Redes Sociales-->
+      <button class="btn">
+        <i class="ri-share-line"></i>
+      </button>
+      <ul class="list">
+        <li class="item">
+          <a href="https://www.instagram.com/quiroilustra/" class="links ig" target="_blank">
+            <i class="ri-instagram-line"></i>
+          </a>
+        </li>
+        <li class="item" style="--d: 0.20s">
+          <a href="https://www.facebook.com/quiroilustraciones/?ref=page_internal" class="links fb" target="_blank">
+            <i class="ri-facebook-line"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const btnEl = document.querySelector('.btn')
+      const toggleOptions = () => {
+        const wrapperEl = document.querySelector('.wrapper')
+        const iconEl = btnEl.querySelector('i')
+
+        wrapperEl.classList.toggle('active')
+
+        if (iconEl.classList.contains('ri-share-line')) {
+          iconEl.classList.replace('ri-share-line', 'ri-close-line')
+        } else {
+          iconEl.classList.replace('ri-close-line', 'ri-share-line')
+        }
+      }
+      btnEl.addEventListener('click', toggleOptions)
+    </script>
+  </footer>
 </body>
 </html>
