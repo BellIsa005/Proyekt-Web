@@ -361,7 +361,7 @@ img {
 .fundador{
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 100px 200px 300px;
+  grid-template-rows: 100px 200px 400px;
   margin: auto;
   color: #fff;
   align-items: center;
@@ -387,6 +387,7 @@ img {
   height: 100%;
   width: 300px;
   margin: auto;
+
 }
 
 @media screen and (max-width: 600px) {

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/faqq.css">
+	<title>Quiro Responde</title>
+
+	<!--Link para animación en redes sociales-->
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <!--Ícono para el email-->
+  <script 
+      src="https://kit.fontawesome.com/c7958308f5.js" crossorigin="anonymous">
+  </script>
+  <!--Efecto para el acordion-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"
+	/>
+</head>
+<body>
+<!--Encabezado-->
+<nav class="navbar container">
+<!--Logo y página principal-->
+			<a title="QUIRO'S" href="index.html" class=logo><img class=logoimg src="img/quiro_logo.jpeg" alt="QuiroIlustra"></a>
+
+<!--Para un menú responsivo-->
+		<input type="checkbox" id="toggler" />
+    <label for="toggler"><i class="ri-menu-line"></i></label>
+
+<!--Pestañas principales-->
+		<div class="menu">
+		  <ul class="list">
+		  	<li class="link">
+		      <a href="aboutus.html">About us</a>
+		    </li>
+		    <li class="link">
+		      <a>Clothes</a>
+		      <ul class="submenu">
+		        <li class="link"><a href="clothesvar.html">Hombres</a></li>
+		        <li class="link"><a href="clothesmuj.html">Mujeres</a></li>
+		      </ul>
+		    </li>
+		    <li class="link">
+		      <a href="acces.html">Accessories</a>
+		    </li>
+		    <li class="link">
+		      <a href="faq.html">FAQ</a>
+		    </li>
+        <li class="link">
+          <a href="subs.html">Subscribe</a>
+        </li>
+		  </ul>
+		</div>
+</nav>
+
+<!--Sección de preguntas frecuentes-->
+<section class="faq containerfaq" aria-label="Frequently Asked Questions">
+			<header class="faq__header">
+				<h2 class="faq__header-title">Preguntas Frecuentes</h2>
+			</header>
+			<div class="faq__body">
+				<details aria-expanded="true" class="faq__panel" open>
+					<summary class="faq__label">Dónde está ubicado su punto venta?</summary>
+					<div class="faq__panel-body">
+						<p class="faq__panel-answer">
+							Nuestra principal tienda está ubicada en el centro de la ciudad de La Paz, en la calle Jaen #524.
+							Pero realizamos entregas en la Plaza Avaroa y la Iglesia de San Miguel.
+						</p>
+					</div>
+				</details>
+				<details aria-expanded="false" class="faq__panel">
+					<summary class="faq__label">
+						Tienen otros puntos de venta en Bolivia?
+					</summary>
+					<div class="faq__panel-body">
+						<p class="faq__panel-answer">
+							Tenemos puntos de venta gracias a nuestra alianzas, en la ciudad de Cochabamba y Santa Cruz. Sin embargo realizamos envíos a toda Bolivia. <br>
+							En Santa Cruz nos encontramos en la tienda Green Lovers, Calle Alejandro Ramirez #28.
+							<br>
+							En Cochabamba nos encontramos en la tienda Mercadito de Duendes, Calle Oquendo #434 entre Venezuela y Federico Blanco.
+						</p>
+					</div>
+				</details>
+				<details aria-expanded="false" class="faq__panel">
+					<summary class="faq__label">
+						Se puede realizar pedidos por mayor?
+					</summary>
+					<div class="faq__panel-body">
+						<p class="faq__panel-answer">
+							Claro que sí, en Quiro estamos abiertos a todas las ofertas. Por favor escríbenos a nuestro email, disponible en la parte inferior de nuestra página.
+						</p>
+					</div>
+				</details>
+				<details aria-expanded="false" class="faq__panel">
+					<summary class="faq__label">Se puede realizar pedidos personalizados al por menor?</summary>
+					<div class="faq__panel-body">
+						<p class="faq__panel-answer">
+							Lamentablemente tenemos una cantidad mínima que exigimos a nuestros clientes. Pero todo depende del diseño y anticipación.
+						</p>
+					</div>
+				</details>
+				<details aria-expanded="false" class="faq__panel">
+					<summary class="faq__label">Cómo podemos saber en que ferias participarán?</summary>
+					<div class="faq__panel-body">
+						<p class="faq__panel-answer">
+							Síguenos en nuestras redes sociales o subscríbete para que te enviemos ofertas, nuevos lanzamientos, sobre las ferias que somos parte y mucho más.
+						</p>
+					</div>
+				</details>
+			</div>
+</section>
+		<script>
+			const panels = document.querySelectorAll('.faq__panel')
+			const panelLabels = document.querySelectorAll('.faq__label')
+			panels.forEach((panel, index) => {
+				let isExpanded = panel.getAttribute('aria-expanded') === 'true'
+
+				panelLabels[index].addEventListener('click', () => {
+					console.log('clicked')
+					isExpanded = !isExpanded
+					panel.setAttribute('aria-expanded', isExpanded)
+				})
+			})
+		</script>
+
+<!--Footer-->
+  <div class="foot">
+    <div class="logoquiro"><!--Logo-->
+      <a title="QUIRO'S" href="index.html" class=logo2><img class=logoimg2 src="img/quiro_logo.jpeg" alt="QuiroIlustra"></a>
+    </div>
+
+    <div class="whats"><!--Chat a whatsapp-->
+     <a href="https://services.tochat.be/es/api/business/send/7022adf2-b02b-4569-8228-4c08f37c5f9e" target="_blank" class="btn_whats">Escríbenos</a>  
+    </div>
+
+    <div class="email"><!--Correo Electrónico-->
+      <a href="mailto:bell.isa.go@gmail.com" class="btn_email" ><i class="fa-solid fa-envelope"></i>&nbsp;Asuntos Comerciales</a>
+    </div>
+
+    <div class="wrapper"><!--Redes Sociales-->
+      <button class="btn">
+        <i class="ri-share-line"></i>
+      </button>
+      <ul class="list">
+        <li class="item">
+          <a href="https://www.instagram.com/quiroilustra/" class="links ig" target="_blank">
+            <i class="ri-instagram-line"></i>
+          </a>
+        </li>
+        <li class="item" style="--d: 0.20s">
+          <a href="https://www.facebook.com/quiroilustraciones/?ref=page_internal" class="links fb" target="_blank">
+            <i class="ri-facebook-line"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const btnEl = document.querySelector('.btn')
+      const toggleOptions = () => {
+        const wrapperEl = document.querySelector('.wrapper')
+        const iconEl = btnEl.querySelector('i')
+
+        wrapperEl.classList.toggle('active')
+
+        if (iconEl.classList.contains('ri-share-line')) {
+          iconEl.classList.replace('ri-share-line', 'ri-close-line')
+        } else {
+          iconEl.classList.replace('ri-close-line', 'ri-share-line')
+        }
+      }
+      btnEl.addEventListener('click', toggleOptions)
+    </script>
+  </div>
+</body>
+</html>
